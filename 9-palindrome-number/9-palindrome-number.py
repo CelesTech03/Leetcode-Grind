@@ -4,8 +4,6 @@ class Solution:
         if x < 0:
             return False
 	
-	    
-
         inputNum = x
         newNum = 0
         while x>0:
