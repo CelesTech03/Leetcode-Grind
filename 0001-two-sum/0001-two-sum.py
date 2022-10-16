@@ -3,13 +3,12 @@ class Solution:
         
         values = {}
         
-        # index, element in array
-        for i, elem in enumerate(nums):
-            comp = target - elem
-            
-            if comp in values:
-                
-                return [values[comp], i]
-            
-            values[elem] = i
+        for index, element in enumerate(nums):
+            complement = target - element
+            if complement in values:
+                return [values[complement], index]
+            else:
+                values[element] = index
         return []
+        
+        
