@@ -14,6 +14,6 @@ class Solution:
                 return False
             if dict[char] == 0:
                 return False
-            
-            dict[char] -= 1
+            else:
+                dict[char] -= 1
         return True
