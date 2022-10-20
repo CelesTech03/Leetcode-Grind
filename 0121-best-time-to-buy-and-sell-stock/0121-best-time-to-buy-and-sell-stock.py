@@ -1,6 +1,6 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        
+       
         left = 0 # buy
         right = 1 # sell
         
@@ -14,8 +14,9 @@ class Solution:
             else:
                 left = right
             right += 1
-            
+        
         return maxP
+            
                 
                 
             
