@@ -1,21 +1,21 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-       
-        left = 0
-        right = 1
+        
+        first = 0
+        second = 1
         
         maxP = 0
         
-        while right < len(prices):
-            if prices[left] < prices[right]:
-                profit = prices[right] - prices[left]
-                maxP = max(profit, maxP)
+        while second < len(prices):
+            if prices[first] < prices[second]:
+                profit = prices[second] - prices[first]
+                maxP = max(maxP, profit)
             else:
-                left = right
-            right += 1
+                first = second
+            second += 1
+                
         return maxP
-    
-
+                
             
                 
                 
