@@ -9,5 +9,3 @@ class Solution:
                 return [values[complement], index]
             else:
                 values[element] = index
-     
-        
