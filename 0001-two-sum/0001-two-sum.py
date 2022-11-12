@@ -3,7 +3,7 @@ class Solution:
         
         values = {}
         
-        for index,item in enumerate(nums):
+        for index, item in enumerate(nums):
             complement = target - item
             if complement in values:
                 return [values[complement], index]
