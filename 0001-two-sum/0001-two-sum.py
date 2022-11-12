@@ -3,9 +3,9 @@ class Solution:
         
         values = {}
         
-        for index, element in enumerate(nums):
-            complement = target - element
+        for index,item in enumerate(nums):
+            complement = target - item
             if complement in values:
                 return [values[complement], index]
             else:
-                values[element] = index
+                values[item] = index
