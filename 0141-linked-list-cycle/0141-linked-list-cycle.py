@@ -15,7 +15,7 @@ class Solution:
         fast = head.next.next
         
         while fast and fast.next:
-            if slow == fast:
+            if slow == fast or fast.next == slow:
                 return True
             slow = slow.next
             fast = fast.next.next
@@ -23,3 +23,15 @@ class Solution:
         return False
 
         
+#         if not head or not head.next:
+#             return False
+        
+#         slow = head
+#         fast = head.next
+        
+#         while fast and fast.next:
+#             if fast == slow or fast.next == slow:
+#                 return True
+#             slow = slow.next
+#             fast = fast.next.next
+#         return False
