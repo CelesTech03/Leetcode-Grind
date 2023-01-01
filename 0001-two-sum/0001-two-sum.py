@@ -3,9 +3,12 @@ class Solution:
         
         values = {}
         
-        for index, item in enumerate(nums):
-            complement = target - item
+        for index, ele in enumerate(nums):
+            complement = target - ele
             if complement in values:
-                return [values[complement], index]
+                return values[complement], index
             else:
-                values[item] = index
+                values[ele] = index
+                
+        
+    
