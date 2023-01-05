@@ -1,22 +1,22 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         
-        result = []
-        
-        left = 0
-        right = len(nums) - 1
-        
-        while left <= right:
-            if nums[left] * nums[left] > nums[right] * nums[right]:
-                result.append(nums[left] * nums[left])
-                left += 1
+        sortedArr = [0 for _ in nums]
+
+        smallerValueIdx = 0
+        largerValueIdx = len(nums) - 1
+
+        # Looping from right to left (last index to first)
+        for idx in reversed(range(len(nums))):
+            smallerValue = nums[smallerValueIdx]
+            largerValue = nums[largerValueIdx]
+
+            if abs(smallerValue) > abs(largerValue):
+                sortedArr[idx] = smallerValue * smallerValue
+                smallerValueIdx += 1
             else:
-                result.append(nums[right] * nums[right])
-                right -= 1
-            
-            
-            
-            
-        return result[::-1] # reverse array
-        
-            
+                sortedArr[idx] = largerValue * largerValue
+                largerValueIdx -= 1
+
+        return sortedArr
+        # O(n) time | O(n) space
