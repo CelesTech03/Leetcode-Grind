@@ -1,6 +1,4 @@
 class Solution:
-    
-    RED, WHITE, BLUE = range(3)
     def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
